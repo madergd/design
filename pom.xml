@@ -72,6 +72,12 @@
             <resource>
                 <directory>src/main</directory>
             </resource>
+            <resource>
+                <directory>src/main/web/css</directory>
+            </resource>
+            <resource>
+                <directory>src/main/web/javascript</directory>
+            </resource>
         </resources>
         <plugins>
            <plugin>
