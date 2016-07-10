@@ -8,7 +8,5 @@ Sunrise and sunset are coming back incorrect for Hong Kong, see http://openweath
 
 
 # TODOs
-Internationalization for date
-Css
-Tests
+Internationalization, styling, tests
 
