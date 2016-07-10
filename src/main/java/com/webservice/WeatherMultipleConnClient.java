@@ -80,23 +80,6 @@ public class WeatherMultipleConnClient {
             httpGet.setQueryString(URLEncodedUtils.format(params, StandardCharsets.UTF_8));
             httpGet.getParams().setParameter(HttpMethodParams.RETRY_HANDLER, new DefaultHttpMethodRetryHandler(3, false));
 
-            /*
-            //responseBody = processResponse(httpGet.getResponseBodyAsStream());
-            It is more efficient to use a stream rather than getting the entire entity as a String because the latter
-            means that the entire contents of the response need to be read before they can be returned to your code, and
-            control cannot be returned to your code until the entire response has been sent by the server.
-            If you processed the response as a stream, then what you are actually doing is processing it N bytes at a time.
-            This means that you can begin processing the first response segment while the remote server is still sending
-            back the next segment of data. Therefore this makes more sense as an access method if your use-case allows you
-            to process the data as it is received.
-
-            If however you need the entire response as a String for whatever reason, then all of the efficiencies of the
-            stream method have no bearing to you whatsoever - because even if you read the response in pieces, you still
-            need to wait for the entire response - and have it all contained in a single String - before you can process it.
-
-            The efficiency of using a stream is only available to you if you have a use-case where you can begin processing
-            the response before you have the entire response body.
-            */
             int httpResponseCode = getHttpClient().get().executeMethod(httpGet);
             if (httpResponseCode == HttpStatus.SC_OK) {
                 responseBody = httpGet.getResponseBodyAsString();
