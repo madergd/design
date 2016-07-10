@@ -2,7 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/web/javascript/weather.js" defer="defer"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/javascript/weather.js" defer="defer"></script>
 
 <html>
 <head>
