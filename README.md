@@ -1,6 +1,5 @@
 # design
-Download and create the artifact with:
-mvn clean install
+Download and create the artifact running mvn clean install from the root folder.
 
 Running with jetty  http://localhost:8080/weathermap/weather.jsp
 
